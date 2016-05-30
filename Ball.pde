@@ -42,7 +42,8 @@ class Ball {
  
  
  boolean isTouching( Ball other ) {
- 
+   //implementation
+   return true;
  }
  
   
