@@ -42,16 +42,16 @@ class Ball {
  
  void bounce() {
    if (x>=600){
-     x = x - dx;
+     dx = -dx;
    }
    if (x<=0) {
-     x = x + dx;
+     dx = -dx;
    }
    if (y>=600) {
-     y = y - dy;
+     dy = -dy;
    }
    if (y<=0) {
-     y = y + dy;
+     dy = -dy;
    }
    
  }
