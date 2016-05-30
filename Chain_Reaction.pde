@@ -26,7 +26,6 @@ void draw() {
   }
 }
 
-
 void mouseClicked() {
   if ( !reactionStarted ) {
     balls[0].x = mouseX;
