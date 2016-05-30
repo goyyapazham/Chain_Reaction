@@ -43,7 +43,8 @@ class Ball {
  
  boolean isTouching( Ball other ) {
    //implementation
-   return true;
+   return ((x-rad)*(x-rad) + (y-rad)*(y-rad)) == 
+          ((other.x-other.rad)*(other.x-other.rad) + (other.y-other.rad)*(other.y-other.rad);
  }
  
   
