@@ -42,16 +42,16 @@ class Ball {
  
  void bounce() {
    if (x>=600){
-     x = -x + dx;
+     x = x - dx;
    }
    if (x<=0) {
-     x = -x + dx;
+     x = x + dx;
    }
    if (y>=600) {
-     y = -y + dy;
+     y = y - dy;
    }
    if (y<=0) {
-     y = -y + dy;
+     y = y + dy;
    }
    
  }
@@ -62,17 +62,23 @@ class Ball {
           ((other.x-other.rad)*(other.x-other.rad) + (other.y-other.rad)*(other.y-other.rad));
  }
  
- void draw(int i) { 
-   ellipse (random(600),random(600),i,i);
+ void draw(float i) { 
+   ellipse(x,y,rad,rad);
  }
  
  void process() {
    if (state == 0 ) move();
    else if (state == 1 ) {
-    rad = rad + 1; 
-   }
-   else if (state == 2 ) {
-    rad = rad - 1; 
+     while (rad < 50) {
+       draw(rad + 1);
+     }
+     state = 2;
+   } 
+   else if (state == 2) {
+     while (rad > 0) {
+       draw(rad - 1);
+     }
+     state=3;
    }
    else if (state == 3 ) {
     rad=0; 
