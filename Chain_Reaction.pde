@@ -23,6 +23,7 @@ void draw() {
   //balls[1].process();
   for (int i=0; i < balls.length; i++ ) {
     balls[i].draw(i);
+    fill(balls[i].c);
     balls[i].process();
   }
   
