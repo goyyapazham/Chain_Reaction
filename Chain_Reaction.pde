@@ -19,11 +19,13 @@ void draw() {
   for (int i=0; i < balls.length; i++ ) {
     
   }
-
+  //balls[1].draw(1);
+  //balls[1].process();
   for (int i=0; i < balls.length; i++ ) {
     balls[i].draw(i);
     balls[i].process();
   }
+  
 }
 
 void mouseClicked() {
