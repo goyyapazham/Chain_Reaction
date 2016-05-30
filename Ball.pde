@@ -34,17 +34,50 @@ class Ball {
   }
   
 
-  void move() {
+ void move() {
     x = x + dx;
     y = y + dy;
     bounce();
   }
  
+ void bounce() {
+   if (x>=600){
+     x = -x + dx;
+   }
+   if (x<=0) {
+     x = -x + dx;
+   }
+   if (y>=600) {
+     y = -y + dy;
+   }
+   if (y<=0) {
+     y = -y + dy;
+   }
+   
+ }
  
  boolean isTouching( Ball other ) {
    //implementation
-   return true;
+   return ((x-rad)*(x-rad) + (y-rad)*(y-rad)) == 
+          ((other.x-other.rad)*(other.x-other.rad) + (other.y-other.rad)*(other.y-other.rad));
  }
  
+ void draw(int i) { 
+   ellipse (random(600),random(600),i,i);
+ }
+ 
+ void process() {
+   if (state == 0 ) move();
+   else if (state == 1 ) {
+    rad = rad + 1; 
+   }
+   else if (state == 2 ) {
+    rad = rad - 1; 
+   }
+   else if (state == 3 ) {
+    rad=0; 
+   }
+   
+ }
   
 }//end class Ball
