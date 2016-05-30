@@ -22,7 +22,7 @@ class Ball {
     float b = random(256);
     c = color( r, g, b );
     
-    rad = 20;
+    rad = 30;
     
     x = random( (width - r) + r/2 );
     y = random( (height - r) + r/2 );
@@ -70,13 +70,13 @@ class Ball {
    if (state == 0 ) move();
    else if (state == 1 ) {
      while (rad < 50) {
-       draw(rad + 1);
+       rad = rad + 1;
      }
      state = 2;
    } 
    else if (state == 2) {
      while (rad > 0) {
-       draw(rad - 1);
+       rad = rad - 1;
      }
      state=3;
    }

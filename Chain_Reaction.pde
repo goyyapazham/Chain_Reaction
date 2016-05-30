@@ -36,5 +36,5 @@ void mouseClicked() {
     balls[0].rad = 0.1;
     balls[0].state = Ball.GROWING;
     reactionStarted = true;
-    }
+  }
 }
