@@ -22,7 +22,7 @@ class Ball {
     float b = random(256);
     c = color( r, g, b );
     
-    rad = 10;
+    rad = 20;
     
     x = random( (width - r) + r/2 );
     y = random( (height - r) + r/2 );
